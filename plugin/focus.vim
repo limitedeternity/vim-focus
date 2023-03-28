@@ -31,7 +31,7 @@ function! s:FocusStart() abort
 	call setbufvar(s:focusBuf, '&buftype', 'nofile')
 	call setbufvar(s:focusBuf, '&filetype', s:originFileType)
 
-	if exists('g:VimFocusOpenWay') && g:VimFocusOpenWay == 'window'
+	if exists('g:VimFocusOpenWay') && g:VimFocusOpenWay is# 'window'
 		silent execute "vertical botright split"
 	endif
 
